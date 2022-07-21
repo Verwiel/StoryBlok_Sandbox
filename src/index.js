@@ -9,7 +9,7 @@ import Grid from "./components/Grid"
 import Feature from "./components/Feature"
 
 storyblokInit({
-  accessToken: "VLIdz810xh2HsaAVlJeVeQtt",
+  accessToken: process.env.REACT_APP_STORYBLOK_ACCESS_TOKEN,
   use: [apiPlugin],
   components: {
     page: Page,
