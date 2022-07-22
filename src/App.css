@@ -36,3 +36,10 @@
     transform: rotate(360deg);
   }
 }
+
+.storyblok-teaser {
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  background-color: blue;
+}

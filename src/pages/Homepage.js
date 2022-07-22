@@ -1,0 +1,23 @@
+import React from 'react'
+import { useStoryblok, StoryblokComponent } from "@storyblok/react"
+
+const Homepage = () => {
+    let slug =
+        window.location.pathname === "/"
+        ? "home"
+        : window.location.pathname.replace("/", "")
+
+    const story = useStoryblok(slug, { version: "draft" })
+
+    if (!story || !story.content) {
+        return <div>Loading...</div>
+    }
+
+    return (
+        <main>
+            <StoryblokComponent blok={story.content} />
+        </main>
+    )
+}
+
+export default Homepage
